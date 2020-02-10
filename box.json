@@ -1,0 +1,40 @@
+{
+    "name":"socketCB",
+    "version":"0.0.0",
+    "author":"",
+    "location":"ryanalbrecht/socketCB#v0.0.0",
+    "homepage":"https://github.com/ryanalbrecht/socketCB",
+    "documentation":"https://github.com/ryanalbrecht/socketCB",
+    "repository":{
+        "type":"git",
+        "URL":"https://github.com/ryanalbrecht/socketCB"
+    },
+    "bugs":"https://github.com/ryanalbrecht/socketCB/issues",
+    "slug":"socketCB",
+    "shortDescription":"An engine agnostic websocket server that run inside your app",
+    "description":"An engine agnostic websocket server that run inside your app",
+    "type":"modules",
+    "dependencies":{
+        "cbjavaloader":"^2.0.0"
+    },
+    "devDependencies":{
+        "coldbox":"^5.0.0",
+        "testbox":"^3.0.0",
+        "cbjavaloader":"^2.0.0"
+    },
+    "installPaths":{
+        "testbox":"testbox/",
+        "coldbox":"tests/resources/app/coldbox/",
+        "cbjavaloader":"modules/cbjavaloader/"
+    },
+    "scripts":{
+        "postVersion":"package set location='ryanalbrecht/socketCB#v`package version`'",
+        "onRelease":"publish",
+        "postPublish":"!git push && git push --tags"
+    },
+    "ignore":[
+        "**/.*",
+        "test",
+        "tests"
+    ]
+}
